@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": { "dev": "vite", "build": "vite", "preview": "vite preview" },
+  "scripts": { "dev": "vite", "build": "vite", "preview": "vite preview", "backend": "cd backend && php artisan serve" },
   "dependencies": { "@vitejs/plugin-react": "latest", "vite": "latest", "typescript": "latest", "react": "latest", "react-dom": "latest", "react-router-dom": "latest", "lucide-react": "latest" },
   "devDependencies": {}
 }
