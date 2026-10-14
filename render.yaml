@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: staywise-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /up
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: SESSION_DRIVER
+        value: file
+      - key: CACHE_STORE
+        value: file
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: DB_URL
+        sync: false
+      - key: APP_KEY
+        sync: false
+      - key: FRONTEND_URL
+        value: http://localhost:5173
